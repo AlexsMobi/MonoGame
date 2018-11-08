@@ -113,7 +113,16 @@ namespace Microsoft.Xna.Framework
         }
         #endregion
 
+        public override bool PrefersHomeIndicatorAutoHidden
+        {
+            get { return true; }
+        }
 
+        public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+            this.SetNeedsUpdateOfHomeIndicatorAutoHidden();
+        }
 
 
         #region iOS 8 or newer
