@@ -121,7 +121,8 @@ namespace Microsoft.Xna.Framework
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
-            this.SetNeedsUpdateOfHomeIndicatorAutoHidden();
+            if (UIDevice.CurrentDevice.CheckSystemVersion(11, 0))
+                this.SetNeedsUpdateOfHomeIndicatorAutoHidden();
         }
 
 
