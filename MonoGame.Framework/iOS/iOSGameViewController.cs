@@ -113,10 +113,7 @@ namespace Microsoft.Xna.Framework
         }
         #endregion
 
-        public override bool PrefersHomeIndicatorAutoHidden
-        {
-            get { return true; }
-        }
+        public override bool PrefersHomeIndicatorAutoHidden => false;
 
         public override void ViewDidAppear(bool animated)
         {
